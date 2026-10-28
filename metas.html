@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0f23">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/metas.css">
+  <title>Planificar metas | Calistium</title>
+</head>
+<body>
+  <div class="metas-page-shell">
+    <header class="metas-topbar">
+      <a class="metas-brand" href="/" aria-label="Volver a Calistium">
+        <img src="/images/calistium-logo.webp" alt="Calistium" width="132" height="82">
+      </a>
+      <a class="back-link" href="/"><span aria-hidden="true">←</span> Volver a Calistium</a>
+    </header>
+
+    <main>
+      <section class="metas-hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> DESARROLLO PERSONAL</p>
+          <h1>Planificá tus metas</h1>
+          <p class="hero-subtitle">Convertí tus objetivos en acciones visibles. Definí hasta ocho hábitos y marcá cada día que los cumplas.</p>
+        </div>
+        <div class="hero-mark" aria-hidden="true"><span>01</span><small>UN DÍA<br> A LA VEZ</small></div>
+      </section>
+
+      <section class="tracker-layout" aria-label="Planificador mensual de metas">
+        <aside class="panel goals-panel">
+          <div class="panel-heading">
+            <div><p class="section-kicker">TU PLAN</p><h2>Metas del mes</h2></div>
+            <span class="panel-index">A</span>
+          </div>
+          <p class="panel-description">Escribí tus metas en las casillas. Cada una tendrá su propio color en el calendario circular.</p>
+
+          <label class="field-label" for="mes-input">Mes que vas a trabajar</label>
+          <input class="mes-input" type="text" placeholder="Ej. Octubre 2026" id="mes-input" maxlength="40" autocomplete="off">
+
+          <div class="goal-list-heading"><span>TUS HÁBITOS</span><span>HASTA 8</span></div>
+          <div class="metas-list" id="metas-list"></div>
+
+          <div class="notes-block">
+            <label class="field-label" for="notas">Notas y reflexión</label>
+            <textarea class="notas-area" id="notas" rows="5" maxlength="3000" placeholder="¿Qué salió bien? ¿Qué querés ajustar la próxima semana?"></textarea>
+          </div>
+          <div class="goals-footer"><span class="save-indicator"><i></i> Guardado automático en este navegador</span><button class="reset-btn" id="reset-btn" type="button">Limpiar marcas</button></div>
+        </aside>
+
+        <section class="panel calendar-panel">
+          <div class="panel-heading calendar-heading">
+            <div><p class="section-kicker">SEGUIMIENTO DIARIO</p><h2>Tu constancia en el calendario</h2></div>
+            <span class="panel-index">B</span>
+          </div>
+          <p class="panel-description">Tocá un segmento para marcar o desmarcar una meta en ese día. Pasá el cursor por encima para ver cuál es.</p>
+          <div class="tracker-key"><span class="key-swatch"></span> Pendiente <span class="key-swatch completed"></span> Cumplida</div>
+          <div class="canvas-wrap">
+            <canvas id="tracker" width="560" height="560" aria-label="Calendario circular interactivo con 31 días y 8 metas"></canvas>
+            <div class="tooltip" id="tooltip" role="status"></div>
+          </div>
+          <div class="legend-title">REFERENCIA DE COLORES</div>
+          <div class="legend" id="legend"></div>
+          <p class="calendar-note"><span aria-hidden="true">✦</span> No busques una racha perfecta; buscá volver al plan cuando te desviás.</p>
+        </section>
+      </section>
+      <footer class="metas-footer"><span>CALISTIUM</span><span>Progreso real, un hábito a la vez.</span></footer>
+    </main>
+  </div>
+  <script src="/metas.js" defer></script>
+</body>
+</html>

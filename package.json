@@ -1,0 +1,38 @@
+{
+  "name": "calistium",
+  "version": "1.0.0",
+  "description": "Calistium: plataforma de calistenia y desarrollo personal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "enrich:wger": "node scripts/enrich-wger.js",
+    "check": "node --check server.js && node --check public/app.js && node --check scripts/enrich-wger.js && node --check scripts/crear-cuenta-expotec.js && node --check services/wger-catalog.js",
+    "test": "node scripts/check-project.js",
+    "seed:expotec-admin": "node scripts/crear-cuenta-expotec.js"
+  },
+  "keywords": [
+    "fitness",
+    "gamification",
+    "calisthenics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7",
+    "google-auth-library": "^10.3.0",
+    "bcrypt": "^5.1.1",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
